@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden">
+<html lang="en" class="overflow-x-hidden scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Ing. Vendula Kümmelová</title>
-  </head>
+  <link rel="icon" href="favicon.ico"><script defer src="bundle.js"></script></head>
   <style>
+    #img-cont{
+        transition-duration: 500ms;
+    }
+    #img-cont:hover{
+        filter: drop-shadow(5px 5px 10px #f59e0b);
+    }
+    .border-grad{
+        border-image-source: linear-gradient(to top, #f59e0b, #facc15);
+    }
     #partners{
     animation: scroll;
     animation-delay: 0s;
@@ -20,6 +30,7 @@
     #mover {
     transition: all 0.5s ease-out;
 }
+
     .ref-content{
         transition: border-bottom ease-in-out 0.08s;
     }
@@ -62,15 +73,26 @@
   <body class="font-outfit">
     <header class="flex py-4 justify-between items-center bg-neutral-100 relative z-50" style="background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,227,178,1) 100%);">
-        <span class="w-32"><img src="" class="logo"></span>
+        <span class="w-32"><img src="" id="logosro"></span>
         <span class="text-2xl font-semibold text-amber-500">Ing. Vendula Kümmelová</span>
         <div class="flex gap-16 items-center text-white">
-            <span class="text-lg font-semibold text-slate-800">Služby</span>
-            <span class="text-lg font-semibold text-slate-800">Reference</span>
-            <span class="text-lg font-semibold text-slate-800">O mně</span>
-            <span class="text-lg font-semibold text-slate-800">Blog</span>
+            <span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400"><a href="#3part">Jak pracuji</a></span>
+            <a href="#ref"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400">Reference</span></a>
+            <a href="#ref"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400">Prodáno</span></a>
+            <a href="#ref"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400">Blog</span></a>
+            <a href="#about"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400">O mně</span></a>
         </div>
-        <span class="btnn flex text-lg font-bold text-white border-0 py-2 px-12 rounded-xl cursor-pointer">Kontakt</span>
+        <span class="flex gap-8 items-center">
+            <span class="insta w-10 h-10 transition-all hover:text-slate-400">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z" fill="currentColor"/><path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z" fill="currentColor"/></svg></a>
+            </span>
+            <span class="tel w-10 h-10 transition-all hover:text-slate-400">
+                <a href="tel:+777965985">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg></a>
+            </span>
+            <span class="btnn flex text-lg font-bold text-white border-0 py-2 px-12 rounded-xl cursor-pointer"><a href="#kontakt">Kontakt</a></span>
+        </span>
     </header>
     <div id="hero" class="pt-64 flex">
         <div id="left" class="w-1/2 mb-28">
@@ -80,7 +102,7 @@
                 Na práci v realitách mě baví různorodost a hlavně každý den je jiný.<br>
                 Mým cílem je poskytnout zákazníkovi osobní i profesionální přístup a zajistit komplexní realitní služby spojené s prodejem či pronájmem nemovitostí.
             </div>
-            <span class="flex btnn w-fit text-lg font-bold text-white  py-2 px-12 rounded-xl cursor-pointer">Zjistit více</span>
+            <span class="flex btnn w-fit text-lg font-bold text-white  py-2 px-12 rounded-xl cursor-pointer"><a href="#about">Zjistit více</a></span>
         </div>
         <div id="right" class="w-1/2 flex overflow-hidden justify-end">
             <div id="person-cont" class="flex w-96">
@@ -167,7 +189,15 @@
         </div>
     </div>
     <section id="ref" class="w-full py-16 flex flex-col items-center mt-72">
-        <h1 class="flex text-6xl font-bold mb-16">Reference klientů</h1>
+        <div class="relative">
+            <h1
+                class="absolute -top-20  left-4 text-[20px] lg:text-[100px] text-gray-900 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
+                Reference
+            </h1>
+            <h1 class="text-6xl font-bold mb-16 border-l-8 border-amber-400 pl-4">
+                Reference klientů
+            </h1>
+        </div>
         <div class="w-full flex justify-center">
             <div class="box-wrap flex justify-center gap-12">
                 <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
@@ -211,11 +241,18 @@
     </section>
     <section id="about" class="w-full py-16 flex flex-col items-center">
         <div class="grid grid-cols-2 w-full gap-16">
-            <div id="img-cont" class="w-full">
+            <div id="img-cont" class="flex justify-end w-1/2 h-full transition-all">
                 <img alt="" id="poly" class="w-full h-full rounded-lg">
             </div>
             <div class="flex flex-col">
-                <h2 class="flex text-5xl font-bold mb-6">O mně</h2>
+                <div class="relative">
+                    <h1
+                        class="absolute -top-12   left-0 text-[20px] lg:text-[80px] text-gray-900 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
+                        Kümmelová
+                    </h1>
+                    <h1 class="text-5xl font-bold mb-16 border-l-8 border-amber-400 pl-4">
+                        O mně
+                    </h1>
                 <div class="flex">Nemovitost v mých rukou? S radostí a bez starostí. Jsem vaše osobní realitní makléřka a spolehlivá průvodkyně světem realit.</div>
                 <span class="w-1/3 h-0.5 bg-slate-400 my-10"></span>
                 <ul>
@@ -233,20 +270,46 @@
             </div>
         </div>
     </section>
-    <section id="blog" class="hidden w-full py-16 flex flex-col items-center">
-        <div class="flex flex-col w-full py-12 px-10 border-2 rounded-lg bg-neutral-50">
-            <div class="flex w-full justify-between items-center">
-                <h2 class="flex text-5xl font-bold mb-12">Navštivte můj blog</h2>
-                <h4 class="flex text-sm font-bold">Zobrazit všechny články</h4>
-            </div>
-            <div class="grid grid-cols-2">
-                <div class="flex flex-col items-start article">
-                    <div class="flex w-5/6 h-1/2">
-                        <img id="articleimg1" alt="" class="w-full h-full rounded-3xl">
-                    </div>
-                    <h3 class="flex w-5/6 text-3xl font-bold my-4">Investice Do Nemovitostí Jako Cesta K Finanční Nezávislosti</h3>
-                </div>
-            </div>
+    <section id="blog" class="flex w-full py-24  flex-col items-center">
+        <div class="relative pb-12">
+            <h1
+                class="absolute -top-20  left-4 text-[20px] lg:text-[100px] text-gray-900 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
+                Blog
+            </h1>
+            <h1 class="text-6xl font-bold mb-16 border-l-8 border-amber-400 pl-4">
+                Blog
+            </h1>
+        </div>
+        <div class="w-screen h-screen">
+            <img alt="" id="tabor" class="w-full">
+        </div>
+    </section>
+    <section id="kontakt" class="flex w-full pt-48 pb-24  flex-col items-center h-screen">
+        <div class="relative">
+            <h1
+                class="absolute -top-20  left-4 text-[20px] lg:text-[100px] text-gray-900 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
+                Kontakt
+            </h1>
+            <h1 class="text-6xl font-bold mb-16 border-l-8 border-amber-400 pl-4">
+                Kontakt
+            </h1>
+        </div>
+        <div class="flex flex-col mb-8">
+            <a class="transition-all hover:text-slate-400" href="https://www.google.com/maps/place/9.+kv%C4%9Btna+678%2F20,+390+01+T%C3%A1bor+2/@49.4126327,14.6679679,17z/data=!3m1!4b1!4m6!3m5!1s0x470c98081f7ce19d:0x3d82b5f267adafc5!8m2!3d49.4126292!4d14.6705428!16s%2Fg%2F11j0r98g6f?authuser=0&entry=ttu" target="_blank" rel="noopener noreferrer"><span class="flex justify-start items-start gap-4">
+                <span class="w-8 h-8"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M313.27 124.64L198.73 51.36a32 32 0 00-29.28.35L56.51 127.49A16 16 0 0048 141.63v295.8a16 16 0 0023.49 14.14l97.82-63.79a32 32 0 0129.5-.24l111.86 73a32 32 0 0029.27-.11l115.43-75.94a16 16 0 008.63-14.2V74.57a16 16 0 00-23.49-14.14l-98 63.86a32 32 0 01-29.24.35zM328 128v336M184 48v336" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></span>
+                <span>Adresa: 9.května 678, Tábor</span>
+            </span></a>
+            <a class="transition-all hover:text-slate-400" href="mailto:v.kummelova@atlastabor.cz"><span class="flex justify-center items-center gap-4">
+                <span class="w-8 h-8"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M112 160l144 112 144-112"/></svg></span>
+                <span>v.kummelova@atlastabor.cz</span></a>
+            </span>
+            <a class="transition-all hover:text-slate-400" href="tel:+777965985"><span class="flex justify-center items-center gap-4">
+                <span class="w-8 h-8"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg></span>
+                <span>Telefon: 777 965 985</span></a>
+            </span>
+        </div>
+        <div id="mapcont" class="w-2/3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.8029145969335!2d14.667967877533576!3d49.41263266154206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c98081f7ce19d%3A0x3d82b5f267adafc5!2s9.%20kv%C4%9Btna%20678%2F20%2C%20390%2001%20T%C3%A1bor%202!5e0!3m2!1scs!2scz!4v1713350808360!5m2!1scs!2scz" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
     <footer class="w-full bg-slate-900 grid grid-cols-2 py-16">
@@ -265,7 +328,7 @@
         <span class="text-neutral-50 justify-self-end flex gap-24"><a href="http://forthsite.cz" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" viewBox="0 0 750 98.889">
             <defs>
               <linearGradient id="linear-gradient" x1="0.163" y1="0.5" x2="1.066" y2="1.78" gradientUnits="objectBoundingBox">
-                <stop offset="0" stop-color="#7937ed"/>
+                <stop offset="0" stop-color="#cbd5e1"/>
                 <stop offset="1" stop-color="#dda0c8"/>
               </linearGradient>
             </defs>
