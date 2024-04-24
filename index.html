@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden scroll-smooth">
+<html lang="cs" class="overflow-x-hidden scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Ing. Vendula Kümmelová</title>
-  <link rel="icon" href="favicon.ico"><script defer src="bundle.js"></script></head>
+  <link rel="icon" href="favicon.ico"><script defer src="bundle.js"></script><script defer src="/runtime.bundle.js"></script><script defer src="/index.bundle.js"></script><script defer src="/investice.bundle.js"></script><script defer src="/prava.bundle.js"></script></head>
   <style>
+    .cardd:hover{
+      filter: drop-shadow(5px 5px 10px #00000049);
+      transform: scale(1.05);
+    }
+        .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+      position: relative !important;
+      width: 10rem !important;
+      opacity: 80% !important;
+      margin: auto !important;
+    }
+    .swiper-scrollbar-drag {
+        background: #d1d5db !important;
+    }
     #img-cont{
         transition-duration: 500ms;
     }
@@ -65,22 +78,28 @@
         -webkit-mask-size: 50.5% 50.5%;
         -webkit-mask-repeat: no-repeat;
     }
-    header, #hero, #block1, #ref, #about, #blog, footer{
+    header{
+      padding: 0 5%
+    }
+    #hero, #block1, #ref, #about, #blog, footer, #poradna{
         padding-left: 10%;
         padding-right: 10%;
     };
   </style>
   <body class="font-outfit">
+    <script src="main.bundle.js"></script>
     <header class="flex py-4 justify-between items-center bg-neutral-100 relative z-50" style="background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,227,178,1) 100%);">
-        <span class="w-32"><img src="" id="logosro"></span>
-        <span class="text-2xl font-semibold text-amber-500">Ing. Vendula Kümmelová</span>
+        <span class="w-32"><a href="./"><img src="" id="logosro"></a></span>
+        <span class="text-lg font-semibold text-amber-500"><a href="./">Ing. Vendula Kümmelová</a></span>
         <div class="flex gap-16 items-center text-white">
-            <span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400"><a href="#3part">Jak pracuji</a></span>
-            <a href="#ref"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400">Reference</span></a>
-            <a href="#ref"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400">Prodáno</span></a>
-            <a href="#ref"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400">Blog</span></a>
-            <a href="#about"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400">O mně</span></a>
+            <span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400 hover:border-b-2"><a href="#3part">Jak pracuji</a></span>
+            <a href="#ref"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400 hover:border-b-2">Reference</span></a>
+            <a href="#ref"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400 hover:border-b-2">Prodáno</span></a>
+            <a href="#about"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400 hover:border-b-2">O mně</span></a>
+            <a href="#about"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400 hover:border-b-2">Poradna</span></a>
+            <a href="#blog"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400 hover:border-b-2">Blog</span></a>
+            <a href="#contact-form"><span class="text-lg font-semibold text-slate-800 transition-all hover:text-slate-400 hover:border-b-2">Kontakt</span></a>
         </div>
         <span class="flex gap-8 items-center">
             <span class="insta w-10 h-10 transition-all hover:text-slate-400">
@@ -91,7 +110,7 @@
                 <a href="tel:+777965985">
                 <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg></a>
             </span>
-            <span class="btnn flex text-lg font-bold text-white border-0 py-2 px-12 rounded-xl cursor-pointer"><a href="#kontakt">Kontakt</a></span>
+            <span class="btnn flex text-lg font-bold text-white border-0 py-2 px-6 rounded-xl cursor-pointer w-fit"><a href="#contact-form">Poptejte mě</a></span>
         </span>
     </header>
     <div id="hero" class="pt-64 flex">
@@ -108,7 +127,8 @@
             <div id="person-cont" class="flex w-96">
                 <img id="person" class="ml-auto object-cover z-40">
                 <div id="bubble" class="absolute translate-y-36 translate-x-80 w-auto transition-all z-50 hover:scale-105">
-                    <span class="absolute text-center w-36 text-lg font-bold text-gray-800 bg-white py-2 px-6 rounded-full z-50 leading-none transition-all cursor-default">
+                  <a href="#about">
+                    <span class="absolute text-center w-36 text-lg font-bold text-gray-800 bg-white py-2 px-6 rounded-full z-50 leading-none transition-all">
                         <span class="flex justify-center">16</span>
                         <span class="flex justify-center font-light text-sm text-amber-500">let zkušeností v oboru</span>
                     </span>
@@ -116,9 +136,11 @@
                         <span class="flex justify-center">16</span>
                         <span class="flex justify-center font-light text-sm text-amber-500">let zkušeností v oboru</span>
                     </span>
+                  </a>
                 </div>
                 <div id="bubble" class="absolute translate-y-96 -translate-x-36 w-auto transition-all z-50 hover:scale-105">
-                    <span class="absolute text-center w-36 text-lg font-bold text-gray-800 bg-white py-2 px-6 rounded-full z-50 leading-none transition-all cursor-default">
+                  <a href="#about">
+                    <span class="absolute text-center w-36 text-lg font-bold text-gray-800 bg-white py-2 px-6 rounded-full z-50 leading-none transition-all">
                         <span class="flex justify-center">600+</span>
                         <span class="flex justify-center font-light text-sm text-amber-500">klientů</span>
                     </span>
@@ -126,9 +148,11 @@
                         <span class="flex justify-center">600+</span>
                         <span class="flex justify-center font-light text-sm text-amber-500">klientů</span>
                     </span>
+                  </a>
                 </div>
                 <div id="bubble" class="absolute -translate-x-24 w-auto transition-all z-50 hover:scale-105">
-                    <span class="absolute text-center w-36 text-lg font-bold text-gray-800 bg-white py-2 px-6 rounded-full z-50 leading-none transition-all cursor-default">
+                  <a href="#about">
+                    <span class="absolute text-center w-36 text-lg font-bold text-gray-800 bg-white py-2 px-6 rounded-full z-50 leading-none transition-all">
                         <span class="flex justify-center">500</span>
                         <span class="flex justify-center font-light text-sm text-amber-500">realizovaných transakcí</span>
                     </span>
@@ -136,6 +160,7 @@
                         <span class="flex justify-center">500</span>
                         <span class="flex justify-center font-light text-sm text-amber-500">realizovaných transakcí</span>
                     </span>
+                  </a>
                 </div>
             </div>
         </div>
@@ -148,38 +173,36 @@
     -->
     <section id="partners" class="flex" style="width: 200%;">
         <div id="logos-cont" class="flex w-1/2 items-center py-2 box-border">
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
+            <div class="partner w-24 m-auto flex items-center text-center"><span class="font-bold text-base text-slate-400">400+ Realizovaných zakázek</span></div>
+            <div class="partner w-24 m-auto flex items-center text-center"><span class="font-bold text-base text-slate-400">17<br> Let na trhu</span></div>
+            <div class="partner w-24 m-auto flex items-center text-center"><span class="font-bold text-base text-slate-400">Reference klientů</span></div>
+            <div class="partner w-32 m-auto relative"><img class="h-full w-full taborlogoroll"></div>
         </div>
         <div id="logos-cont" class="flex w-1/2 items-center py-2 box-border justify-between">
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
-            <div class="partner w-24 m-auto"><img alt="" class="nike"></div>
+          <div class="partner w-24 m-auto flex items-center text-center"><span class="font-bold text-base text-slate-400">400+ Realizovaných zakázek</span></div>
+          <div class="partner w-24 m-auto flex items-center text-center"><span class="font-bold text-base text-slate-400">17<br> Let na trhu</span></div>
+          <div class="partner w-24 m-auto flex items-center text-center"><span class="font-bold text-base text-slate-400">Reference klientů</span></div>
+          <div class="partner w-32 m-auto relative"><img class="h-full w-full taborlogoroll"></div>
         </div>
     </section>
     <div id="block1" class="w-full h-0 flex flex-col items-center bg-gradient-to-r from-amber-500 to-yellow-400 py-24 text-gray-800">
         <h1 class="flex text-6xl font-bold mb-16"></h1>
         <div id="3part" class="flex justify-between w-full rounded-lg bg-white px-12 py-12 -mt-24">
-            <div class="cardd w-72 flex flex-col items-center text-center">
+            <div class="cardd w-72 flex flex-col items-center text-center cursor-default transition-all hover:drop-shadow-xl">
                 <div id="cardtop">
                     <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M760-400v-260L560-800 360-660v60h-80v-100l280-200 280 200v300h-80ZM560-800Zm20 160h40v-40h-40v40Zm-80 0h40v-40h-40v40Zm80 80h40v-40h-40v40Zm-80 0h40v-40h-40v40ZM280-220l278 76 238-74q-5-9-14.5-15.5T760-240H558q-27 0-43-2t-33-8l-93-31 22-78 81 27q17 5 40 8t68 4q0-11-6.5-21T578-354l-234-86h-64v220ZM40-80v-440h304q7 0 14 1.5t13 3.5l235 87q33 12 53.5 42t20.5 66h80q50 0 85 33t35 87v40L560-60l-280-78v58H40Zm80-80h80v-280h-80v280Z"fill="#1f2937"/></svg>
                 </div>
                 <div class="cardbot font-bold text-2xl my-4">Prodej nemovitostí</div>
                 <div class="cardcontent">Profesionální pomoc při prodeji nemovitosti klientům. To zahrnuje vyhledávání vhodných kupců, organizaci prohlídek nemovitostí, vyjednávání cen a řešení právních formalit spojených s prodejem.</div>
             </div>
-            <div class="cardd w-72 flex flex-col items-center text-center">
+            <div class="cardd w-72 flex flex-col items-center text-center cursor-default transition-all">
                 <div id="cardtop">
                     <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M80-120v-650l200-150 200 150v90h400v560H80Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 0h80v-80h-80v80Zm0 480h480v-400H320v400Zm240-240v-80h160v80H560Zm0 160v-80h160v80H560ZM400-440v-80h80v80h-80Zm0 160v-80h80v80h-80Z"fill="#1f2937"/></svg>
                 </div>
                 <div class="cardbot font-bold text-2xl my-4">Pronájem nemovitostí</div>
                 <div class="cardcontent">Služby spojené s pronájmem nemovitostí, což zahrnuje hledání vhodných nájemníků, provádění prohlídek, sestavování nájemních smluv a správu nájemního majetku.</div>
             </div>
-            <div class="cardd w-72 flex flex-col items-center text-center">
+            <div class="cardd w-72 flex flex-col items-center text-center cursor-default transition-all">
                 <div id="cardtop">
                     <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m480-80-10-120h-10q-142 0-241-99t-99-241q0-142 99-241t241-99q71 0 132.5 26.5t108 73q46.5 46.5 73 108T800-540q0 75-24.5 144t-67 128q-42.5 59-101 107T480-80Zm80-146q71-60 115.5-140.5T720-540q0-109-75.5-184.5T460-800q-109 0-184.5 75.5T200-540q0 109 75.5 184.5T460-280h100v54Zm-101-95q17 0 29-12t12-29q0-17-12-29t-29-12q-17 0-29 12t-12 29q0 17 12 29t29 12Zm-29-127h60q0-30 6-42t38-44q18-18 30-39t12-45q0-51-34.5-76.5T460-720q-44 0-74 24.5T344-636l56 22q5-17 19-33.5t41-16.5q27 0 40.5 15t13.5 33q0 17-10 30.5T480-558q-35 30-42.5 47.5T430-448Zm30-65Z"fill="#1f2937"/></svg>
                 </div>
@@ -240,7 +263,7 @@
         </div>
     </section>
     <section id="about" class="w-full py-16 flex flex-col items-center">
-        <div class="grid grid-cols-2 w-full gap-16">
+        <div class="grid  grid-cols-2 w-full gap-16">
             <div id="img-cont" class="flex justify-end w-1/2 h-full transition-all">
                 <img alt="" id="poly" class="w-full h-full rounded-lg">
             </div>
@@ -269,6 +292,29 @@
                 </ul>
             </div>
         </div>
+        </div>
+    </section>
+    <section id="poradna" class="w-full py-16 flex flex-col items-center">
+      <div class="grid  grid-cols-2 w-full gap-16">
+        <div id="img-cont" class="flex justify-end w-1/2 transition-all">
+            <img alt="" id="poradnaimg1" class="w-full h-full rounded-lg">
+        </div>
+        <div class="flex flex-col">
+            <div class="relative">
+                <h1
+                    class="absolute -top-12   left-0 text-[20px] lg:text-[80px] text-gray-900 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
+                    Poradna
+                </h1>
+                <h1 class="text-5xl font-bold mb-16 border-l-8 border-amber-400 pl-4">
+                    Poradna
+                </h1>
+            <div class="flex font-bold text-2xl mb-4">Všechno poradenství zdarma.</div>
+            <span class="flex">
+              Ráda Vám poskytnu zdarma mé profesionální poradenství a pomůžu Vám s jakýmikoliv otázkami ohledně realitních záležitostí. Stačí zavolat nebo napsat kdykoliv – jsem tu pro Vás a ráda Vám pomůžeme najít tu správnou nemovitost nebo prodat Vaši současnou.</span>
+              <div class="flex w-full mt-12 gap-4"><span class="flex btnn w-fit text-lg font-bold text-white  py-2 px-12 rounded-xl cursor-pointer"><a href="tel:+777965985">Zavolat</a></span><span class="flex btnn w-fit text-lg font-bold text-white  py-2 px-12 rounded-xl cursor-pointer"><a href="#contact-form">Napsat</a></span></div>
+        </div>
+    </div>
+    </div>
     </section>
     <section id="blog" class="flex w-full py-24  flex-col items-center">
         <div class="relative pb-12">
@@ -280,11 +326,35 @@
                 Blog
             </h1>
         </div>
-        <div class="w-screen h-screen">
-            <img alt="" id="tabor" class="w-full">
+        <div id="tabor" class="w-screen h-screen bg-cover flex items-center justify-center flex-col">
+            <div class="flex w-3/4 bg-gray-500/20 backdrop-blur-sm p-6 rounded-3xl">
+                <div class="swiper w-full">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper flex items-end">
+                      <!-- Slides -->
+                      <div class="swiper-slide pb-24 font-bold text-3xl text-neutral-200">
+                        <a href="./prava-a-povinnosti-v-najemni-smlouve.html" target="_blank" rel="noopener noreferrer" class="group">
+                        <div id="card2img" class="w-11/12 h-96 mb-4 rounded-lg bg-cover bg-center">
+                        </div>
+                        <span class="text-sm text-gray-400">28. 02. 2024</span>
+                        <span class="flex w-11/12 transition-all group-hover:text-amber-300">Práva a povinnosti: co můžete a nemůžete požadovat v nájemní smlouvě</span>
+                        </a>
+                      </div>
+                      <div class="swiper-slide pb-24 font-bold text-3xl text-neutral-200">
+                        <a href="./investice-do-nemovitosti-jako-cesta-k-financni-nezavislosti.html" target="_blank" rel="noopener noreferrer" class="group">
+                        <div id="card1img" class="w-11/12 h-96 mb-4 rounded-lg bg-cover bg-center">
+                        </div>
+                        <span class="text-sm text-gray-400">26. 03. 2024</span>
+                        <span class="flex w-11/12 transition-all group-hover:text-amber-300">Investice do nemovitostí jako cesta k finanční nezávislosti</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+            </div>
         </div>
     </section>
-    <section id="kontakt" class="flex w-full pt-48 pb-24  flex-col items-center h-screen">
+    <section id="contact-form" class="flex w-full pt-24 pb-24  flex-col items-center">
         <div class="relative">
             <h1
                 class="absolute -top-20  left-4 text-[20px] lg:text-[100px] text-gray-900 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
@@ -294,22 +364,98 @@
                 Kontakt
             </h1>
         </div>
-        <div class="flex flex-col mb-8">
-            <a class="transition-all hover:text-slate-400" href="https://www.google.com/maps/place/9.+kv%C4%9Btna+678%2F20,+390+01+T%C3%A1bor+2/@49.4126327,14.6679679,17z/data=!3m1!4b1!4m6!3m5!1s0x470c98081f7ce19d:0x3d82b5f267adafc5!8m2!3d49.4126292!4d14.6705428!16s%2Fg%2F11j0r98g6f?authuser=0&entry=ttu" target="_blank" rel="noopener noreferrer"><span class="flex justify-start items-start gap-4">
+        <div class="flex flex-col items-start mb-16">
+            <a class="transition-all hover:text-slate-400 text-lg leading-8" href="https://www.google.com/maps/place/9.+kv%C4%9Btna+678%2F20,+390+01+T%C3%A1bor+2/@49.4126327,14.6679679,17z/data=!3m1!4b1!4m6!3m5!1s0x470c98081f7ce19d:0x3d82b5f267adafc5!8m2!3d49.4126292!4d14.6705428!16s%2Fg%2F11j0r98g6f?authuser=0&entry=ttu" target="_blank" rel="noopener noreferrer"><span class="flex justify-start items-start gap-4">
                 <span class="w-8 h-8"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M313.27 124.64L198.73 51.36a32 32 0 00-29.28.35L56.51 127.49A16 16 0 0048 141.63v295.8a16 16 0 0023.49 14.14l97.82-63.79a32 32 0 0129.5-.24l111.86 73a32 32 0 0029.27-.11l115.43-75.94a16 16 0 008.63-14.2V74.57a16 16 0 00-23.49-14.14l-98 63.86a32 32 0 01-29.24.35zM328 128v336M184 48v336" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></span>
                 <span>Adresa: 9.května 678, Tábor</span>
             </span></a>
-            <a class="transition-all hover:text-slate-400" href="mailto:v.kummelova@atlastabor.cz"><span class="flex justify-center items-center gap-4">
+            <a class="transition-all hover:text-slate-400 text-lg leading-8" href="mailto:v.kummelova@atlastabor.cz"><span class="flex justify-center items-center gap-4">
                 <span class="w-8 h-8"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M112 160l144 112 144-112"/></svg></span>
                 <span>v.kummelova@atlastabor.cz</span></a>
             </span>
-            <a class="transition-all hover:text-slate-400" href="tel:+777965985"><span class="flex justify-center items-center gap-4">
+            <a class=" text-lg leading-8 transition-all hover:text-slate-400" href="tel:+777965985"><span class="flex justify-center items-center gap-4">
                 <span class="w-8 h-8"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg></span>
                 <span>Telefon: 777 965 985</span></a>
             </span>
         </div>
-        <div id="mapcont" class="w-2/3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.8029145969335!2d14.667967877533576!3d49.41263266154206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c98081f7ce19d%3A0x3d82b5f267adafc5!2s9.%20kv%C4%9Btna%20678%2F20%2C%20390%2001%20T%C3%A1bor%202!5e0!3m2!1scs!2scz!4v1713350808360!5m2!1scs!2scz" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="w-full flex justify-center items-center">
+            <div class=" px-6 py-12 lg:px-8 relative z-100">
+                <div class="w-fit flex flex-col m-auto p-12 px-24 bg-stone-100 border rounded-xl">
+                <div class="relative inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+                  <div class="absolute left-1/2 z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#69c07b] to-[#f7f7ff] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                </div>
+                <div class="mx-auto max-w-2xl text-center">
+                  <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kontaktujte mě</h2>
+                  <p class="mt-2 text-lg leading-8 text-gray-600">Ráda zodpovím všechny vaše dotazy.</p>
+                </div>
+                <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+                  <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div>
+                      <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">Jméno</label>
+                      <div class="mt-2.5">
+                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block outline-none w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-sm sm:leading-6">
+                      </div>
+                    </div>
+                    <div>
+                      <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Příjmení</label>
+                      <div class="mt-2.5">
+                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-sm sm:leading-6">
+                      </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                      <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+                      <div class="mt-2.5">
+                        <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-sm sm:leading-6">
+                      </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                      <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Telefonní číslo</label>
+                      <div class="relative mt-2.5">
+                        <div class="absolute inset-y-0 left-0 flex items-center">
+                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-sm sm:leading-6">
+                      </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                      <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Vaše zpráva</label>
+                      <div class="mt-2.5">
+                        <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 sm:text-sm sm:leading-6"></textarea>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <label for="Option" class="font-bold text-sm  mb-2.5">Zpráva se týká</label>
+                      <select name="Option" id="" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-600 ">
+                        <option value="Pronájem">Pronájem</option>
+                        <option value="Koupě">Koupě</option>
+                        <option value="Dotaz">Všeobecný dotaz</option>
+                      </select>
+                    </div>
+                    <div class="flex gap-x-4 sm:col-span-2">
+                      <div class="flex h-6 items-center">
+                        <!-- Enabled: "bg-amber-600", Not Enabled: "bg-gray-200" -->
+                        <button type="button" class="bg-gray-200 flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500" role="switch" aria-checked="false" aria-labelledby="switch-1-label">
+                          <span class="sr-only">Agree to policies</span>
+                          <!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" -->
+                          <span aria-hidden="true" class="translate-x-0 h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
+                        </button>
+                      </div>
+                      <label class="text-sm leading-6 text-gray-600" id="switch-1-label">
+                        Souhlasím se zpracováním
+                        <a href="#" class="font-semibold text-amber-500">osobních&nbsp;údajů</a>.
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-10">
+                    <button type="submit" class="block w-full rounded-md bg-amber-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500">Odeslat</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id="mapcont" class="w-1/2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.8029145969335!2d14.667967877533576!3d49.41263266154206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c98081f7ce19d%3A0x3d82b5f267adafc5!2s9.%20kv%C4%9Btna%20678%2F20%2C%20390%2001%20T%C3%A1bor%202!5e0!3m2!1scs!2scz!4v1713350808360!5m2!1scs!2scz" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
     <footer class="w-full bg-slate-900 grid grid-cols-2 py-16">
@@ -340,6 +486,5 @@
             Vaše spokojenost je pro nás prioritou číslo jedna. S každým klientem pracujeme individuálně, abychom porozuměli jejich potřebám a přání. S naší pečlivou péčí a osobním přístupem vám zajistíme pohodlný a bezproblémový proces nákupu či pronájmu nemovitosti.<br>
             Děkujeme, že jste zavítali na náš web. Pro nejnovější nabídku nemovitostí a další informace nás neváhejte kontaktovat. Jsme tu, abychom vám pomohli realizovat váš sen o vlastním domově. Vaše spokojenost je naše odměna.<br> S pozdravem, Ing. Vendula Kümmelová.</div>
     </footer>
-    <script src="bundle.js"></script>
   </body>
 </html>
